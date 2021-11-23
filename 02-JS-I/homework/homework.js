@@ -207,10 +207,12 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  if(typeof letra === 'string' && letra.length === 1) {
-    return letra.match(\^[aeiou]$\i) ? "Es vocal" : "Dato incorrecto";
-  } else {
-    "Dato incorrecto"
+  if(letra.length === 1) {
+    let  ex = /^[aeiou]$/ig;
+    return ex.test(letra) ? "Es vocal" : "Dato incorrecto";
+  }
+  else {
+    return "Dato incorrecto";
   }
 }
 
