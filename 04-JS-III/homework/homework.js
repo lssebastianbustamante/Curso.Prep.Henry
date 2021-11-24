@@ -31,6 +31,15 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
+  let arr = [];
+  for (let i = 0; i < array.length; i++) {
+    const element = array[i] += 1;
+
+    arr.push(element)
+    
+  }
+
+  return arr
 }
 
 
@@ -38,6 +47,11 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
+
+  array.push(elemento);
+
+  return array
+  
 }
 
 
@@ -46,6 +60,8 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
+  array.unshift(elemento);
+  return array
 }
 
 
