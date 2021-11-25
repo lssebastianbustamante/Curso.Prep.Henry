@@ -71,7 +71,7 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-
+  return palabras.join(' ');
 }
 
 
@@ -171,7 +171,7 @@ function empiezaConNueve(n) {
   //Escribe tu código aquí
   let num = n.toString();
 
-  if (num.charAt(0) === "9"){
+  if (num.charAt(0) === "9") {
     return true;
   } else {
     return false;
@@ -184,7 +184,7 @@ function todosIguales(arreglo) {
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
   for (let i = 0; i < arreglo.length - 1; i++) {
-    if(arreglo[i] !== arreglo[i+1]) {
+    if (arreglo[i] !== arreglo[i + 1]) {
       return false
     }
   }
@@ -204,13 +204,13 @@ function mesesDelAño(array) {
     }
   });
 
-  if(newArray.length < 3) {
+  if (newArray.length < 3) {
     return "No se encontraron los meses pedidos";
   } else {
     return newArray;
   }
 
-  
+
 }
 
 
@@ -238,16 +238,23 @@ function breakStatement(numero) {
   //Pista: usá el statement 'break'
   // Tu código:
   let newArray = [];
-  let sum = 0;
-  for (let i = 10; i < numero; i-2) {
+  let sum = numero;
+  for (var i = 0; i < 10; i++) {
+    sum = sum + 2;
     if (sum === i) {
-        break
+      break
+    } else {
+      newArray.push(sum)
     }
-    
   }
-
-  return newArray
+  if (i < 10) {
+    return "Se interrumpió la ejecución";
+  } else {
+    return newArray;
+  }
 }
+
+
 
 
 function continueStatement(numero) {
@@ -257,6 +264,17 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  let newArray = [];
+  let sum = numero;
+  for (var i = 0; i < 10; i++) {
+    if (i === 5) {
+      continue
+    } else {
+      sum = sum + 2;
+      newArray.push(sum)
+    }
+  }
+  return newArray
 }
 
 
